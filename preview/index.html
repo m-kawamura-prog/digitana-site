@@ -21,23 +21,7 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="digital-bg" aria-hidden="true">
-    <span class="geo geo-line g1" data-depth="0.10"></span>
-    <span class="geo geo-corner g2" data-depth="-0.08"></span>
-    <span class="geo geo-square g3" data-depth="0.16"></span>
-    <span class="geo geo-cross g4" data-depth="-0.12"></span>
-    <span class="geo geo-frame g5" data-depth="0.20"></span>
-    <span class="geo geo-line g6" data-depth="-0.15"></span>
-    <span class="geo geo-dotgrid g7" data-depth="0.12"></span>
-    <span class="geo geo-corner g8" data-depth="-0.18"></span>
-    <span class="geo geo-square g9" data-depth="0.14"></span>
-    <span class="geo geo-line g10" data-depth="-0.10"></span>
-    <span class="geo geo-cross g11" data-depth="0.22"></span>
-    <span class="geo geo-frame g12" data-depth="-0.16"></span>
-    <span class="geo geo-corner g13" data-depth="0.11"></span>
-    <span class="geo geo-line g14" data-depth="-0.20"></span>
-  </div>
-  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="digital-bg" aria-hidden="true">\n    <span class="geo geo-line g1"></span>\n    <span class="geo geo-corner g2"></span>\n    <span class="geo geo-square g3"></span>\n    <span class="geo geo-cross g4"></span>\n    <span class="geo geo-frame g5"></span>\n    <span class="geo geo-line g6"></span>\n    <span class="geo geo-dotgrid g7"></span>\n    <span class="geo geo-corner g8"></span>\n    <span class="geo geo-square g9"></span>\n    <span class="geo geo-line g10"></span>\n    <span class="geo geo-cross g11"></span>\n    <span class="geo geo-frame g12"></span>\n    <span class="geo geo-corner g13"></span>\n    <span class="geo geo-line g14"></span>\n    <span class="geo geo-square g15"></span>\n    <span class="geo geo-cross g16"></span>\n    <span class="geo geo-line g17"></span>\n    <span class="geo geo-frame g18"></span>\n    <span class="geo geo-dotgrid g19"></span>\n    <span class="geo geo-corner g20"></span>\n    <span class="geo geo-square g21"></span>\n    <span class="geo geo-line g22"></span>\n    <span class="geo geo-cross g23"></span>\n    <span class="geo geo-corner g24"></span>\n    <span class="geo geo-frame g25"></span>\n    <span class="geo geo-line g26"></span>\n    <span class="geo geo-square g27"></span>\n    <span class="geo geo-cross g28"></span>\n  </div>\n  <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="./" aria-label="デジたな トップ">
@@ -159,39 +143,5 @@
       <nav class="footer-links" aria-label="フッターナビゲーション"><a href="../privacy/">プライバシーポリシー</a><a href="../support/">サポート</a></nav>
       <small>© 2026 デジたな</small>
     </div>
-  </footer>
-  <script>
-    (() => {
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const shapes = [...document.querySelectorAll('.digital-bg .geo')];
-      let ticking = false;
-
-      const updateParallax = () => {
-        if (reduceMotion.matches) {
-          shapes.forEach((shape) => shape.style.setProperty('--scroll-y', '0px'));
-          ticking = false;
-          return;
-        }
-
-        const y = window.scrollY;
-        shapes.forEach((shape) => {
-          const depth = Number(shape.dataset.depth || 0);
-          shape.style.setProperty('--scroll-y', (y * depth).toFixed(1) + 'px');
-        });
-        ticking = false;
-      };
-
-      const requestUpdate = () => {
-        if (!ticking) {
-          requestAnimationFrame(updateParallax);
-          ticking = true;
-        }
-      };
-
-      updateParallax();
-      window.addEventListener('scroll', requestUpdate, { passive: true });
-      reduceMotion.addEventListener?.('change', updateParallax);
-    })();
-  </script>
-</body>
+  </footer>\n</body>
 </html>
