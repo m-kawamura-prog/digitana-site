@@ -27,14 +27,14 @@
         本プライバシーポリシーは、Androidアプリ「デジたな」（以下「本アプリ」）における、
         利用者情報の取扱いについて説明するものです。
       </p>
-      <p class="meta">制定日：2026年9月28日　／　最終更新日：2026年9月30日</p>
+      <p class="meta">制定日：2026年9月28日　／　最終更新日：2026年10月1日</p>
     </div>
 
     <section>
       <h2>1. 基本方針</h2>
       <p>
-        本アプリは、アカウント登録を必須とせず、蔵書リスト等の主要な利用者データを原則として端末内に保存します。
-        一方、本棚画像のAI解析、書誌情報の取得、広告表示など、機能の提供に必要な場合に限り外部サービスと通信します。
+        本アプリは、メールアドレスやパスワード等のアカウント登録を必須とせず、蔵書リスト等の主要な利用者データを原則として端末内に保存します。
+        一方、本棚画像のAI解析、書誌情報の取得、広告表示、購入済み解析回数の管理など、機能の提供に必要な場合に限り外部サービスと通信します。
       </p>
     </section>
 
@@ -83,6 +83,9 @@
       <p>
         AI解析機能の利用権等をGoogle Playのアプリ内購入で購入する場合、購入処理に必要な情報をGoogle Playが取り扱います。
         本アプリ運営者が独自の決済情報（クレジットカード番号等）を取得することはありません。
+        購入済み解析回数の残数、再インストール・機種変更時の引継ぎ、および二重付与・二重利用の防止のため、
+        Firebase Anonymous Authenticationが発行する匿名ID、購入処理に必要な識別情報、残り解析回数、
+        引継ぎコードのハッシュ等をFirebase Cloud Functions / Cloud Firestoreで保存します。
       </p>
 
       <h3>2-7. 診断情報</h3>
@@ -109,9 +112,9 @@
       <p>本アプリでは、機能に応じて以下の外部サービスを利用します。</p>
       <div class="legal-card">
         <ul>
-          <li><strong>Google Firebase / Firebase AI Logic / Gemini</strong> — AI解析、アプリ保護等</li>
+          <li><strong>Google Firebase / Firebase Authentication / Cloud Functions / Cloud Firestore / Firebase AI Logic / Gemini</strong> — 匿名IDによる購入済み解析回数の管理、AI解析、アプリ保護等</li>
           <li><strong>Google AdMob / User Messaging Platform</strong> — 広告配信、同意管理</li>
-          <li><strong>Google Play Billing</strong> — アプリ内購入</li>
+          <li><strong>Google Play Billing / Google Play Developer API</strong> — アプリ内購入、購入状態の検証</li>
           <li><strong>Google Books</strong> — 書誌情報・書影等の取得</li>
           <li><strong>openBD</strong> — 書誌情報・書影等の取得</li>
           <li><strong>国立国会図書館サーチ</strong> — 書誌情報の取得</li>
@@ -137,6 +140,9 @@
         蔵書等の主要データは端末内に保存されます。アプリ内の削除機能、Androidのアプリデータ削除、
         または本アプリのアンインストールにより、端末内のデータを削除できます。
         CSVとして利用者自身が書き出したバックアップは、利用者が選択した保存先に残ります。
+        購入済み解析回数に関するサーバーデータは、再インストール・機種変更時の引継ぎのため、
+        アンインストールだけでは削除されません。削除を希望する場合はサポート窓口へお問い合わせください。
+        削除した購入済み残数は復元できません。
       </p>
     </section>
 
