@@ -600,14 +600,15 @@ a {
   transform:rotate(2deg)
 }
 
-.phone-capture {
-  width:248px;
-  height:510px;
-  left:12px;
-  top:78px;
+.hero-camera-art {
+  position:absolute;
   z-index:2;
-  transform:rotate(-7deg);
-  box-shadow:0 22px 56px rgba(10,46,120,.18)
+  width:360px;
+  height:auto;
+  left:-36px;
+  top:112px;
+  transform:rotate(-3deg);
+  filter:drop-shadow(0 22px 34px rgba(10,46,120,.16))
 }
 
 .phone-speaker {
@@ -1110,11 +1111,10 @@ footer {
     top:10px
   }
 
-  .phone-capture {
-    width:220px;
-    height:470px;
-    left:4px;
-    top:78px
+  .hero-camera-art {
+    width:310px;
+    left:-28px;
+    top:118px
   }
 
   .device-stage:before {
@@ -1229,11 +1229,10 @@ footer {
     top:10px
   }
 
-  .phone-capture {
-    width:192px;
-    height:430px;
-    left:4px;
-    top:74px
+  .hero-camera-art {
+    width:278px;
+    left:-20px;
+    top:112px
   }
 
   .device-stage:before {
