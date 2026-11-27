@@ -18,6 +18,8 @@
   <meta name="twitter:title" content="デジたな｜本棚を、デジタルに。">
   <meta name="twitter:description" content="本棚を撮る。本がつながる。手の中に、もうひとつの書斎を。Android向け蔵書管理アプリ「デジたな」。">
   <title>デジたな｜本棚を、デジタルに。</title>
+  <link rel="icon" type="image/webp" href="assets/digitana_app_icon.webp">
+  <link rel="apple-touch-icon" href="assets/digitana_app_icon.webp">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -55,14 +57,14 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="./" aria-label="デジたな トップ">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <img class="app-icon" src="assets/digitana_app_icon.webp" alt="" width="40" height="40">
         <span class="brand-name">デジたな</span>
       </a>
       <nav aria-label="主要ナビゲーション">
         <a href="#howto">使い方</a>
         <a href="#features">できること</a>
         <a href="#faq">FAQ</a>
-        <a href="support/">サポート</a>
+        <a href="privacy/">利用規約</a>
       </nav>
     </div>
   </header>
@@ -139,7 +141,7 @@
           <p class="kicker">YOUR BOOKS, YOUR DATA</p>
           <h2>蔵書は、まず端末の中に。</h2>
           <p>アカウント登録は不要です。蔵書リストなどの主要データは端末内に保存し、本棚画像の解析など必要な機能だけ外部サービスへ通信します。</p>
-          <a class="arrow-link light" href="privacy/">プライバシーポリシー <span aria-hidden="true">→</span></a>
+          <a class="arrow-link light" href="privacy/">利用規約 <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -150,8 +152,10 @@
         <details><summary><span>01</span>アカウント登録は必要ですか？</summary><p>必要ありません。主要な蔵書データは端末内に保存します。</p></details>
         <details><summary><span>02</span>本棚写真から100%正確に本を特定できますか？</summary><p>撮影条件や背表紙のデザインによって誤認識することがあります。読み取り結果をそのまま登録せず、書誌情報との照合と登録前の確認を行う設計です。</p></details>
         <details><summary><span>03</span>写真を撮らずに本を登録できますか？</summary><p>はい。ISBNバーコードやタイトル・著者・ISBN検索から追加できます。</p></details>
-        <details><summary><span>04</span>機種変更に備えてバックアップできますか？</summary><p>CSV形式での書き出し・取り込みに対応しています。</p></details>
+        <details><summary><span>04</span>機種変更に備えてバックアップできますか？</summary><p>CSV形式での書き出し・取り込みに対応しています。購入済み解析回数は、旧端末で引継ぎコードを保存して別途引き継いでください。</p></details>
+        <details><summary><span>05</span>登録した本やデータを削除できますか？</summary><p>蔵書リストから書籍を削除できます。端末内データをまとめて削除する場合はAndroidの設定からアプリデータを削除するか、アンインストールしてください。CSVバックアップは保存先から別途削除してください。サーバー上の購入残数等の削除はお問い合わせください。</p></details>
       </div>
+      <p id="contact" class="faq-contact">お問い合わせ：<a href="mailto:support@kyoto-service.com">support@kyoto-service.com</a></p>
     </section>
 
     <section class="cta">
@@ -162,13 +166,6 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-main">
-      <a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">デジたな</span></a>
-      <p>本棚を、デジタルに。</p>
-      <nav class="footer-links" aria-label="フッターナビゲーション"><a href="privacy/">プライバシーポリシー</a><a href="support/">サポート</a></nav>
-      <small>© 2026 デジたな</small>
-    </div>
-  </footer>
+  <footer class="simple-footer"><div class="wrap"><small>© 2026 デジたな</small></div></footer>
 </body>
 </html>

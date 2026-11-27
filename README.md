@@ -3,8 +3,9 @@
 Androidアプリ「デジたな」の公式サイトです。
 
 - トップ: https://m-kawamura-prog.github.io/digitana-site/
-- プライバシーポリシー: https://m-kawamura-prog.github.io/digitana-site/privacy/
-- サポート: https://m-kawamura-prog.github.io/digitana-site/support/
+- 利用規約・プライバシーポリシー・特定商取引法に基づく表記: https://m-kawamura-prog.github.io/digitana-site/privacy/
+- FAQ・お問い合わせ: https://m-kawamura-prog.github.io/digitana-site/#faq
+- 旧サポートURL `/support/` はアプリ内リンクの互換性維持のためFAQへ転送します。
 
 ## GitHub Pages
 
@@ -16,5 +17,9 @@ GitHub repository → Settings → Pages → Build and deployment:
 - Folder: /(root)
 
 Google Play公開後はトップページの「Google Playで近日公開」をストアリンクへ差し替えます。
-サポート用公開連絡先が確定したら `support/index.html` を更新します。
+お問い合わせ先はトップページのFAQと法務ページに掲載します。
 AdMob用 `app-ads.txt` はPublisher ID確定後に追加します。
+
+## アイコン
+
+`assets/digitana_app_icon.webp` はアプリリポジトリの `app/src/main/res/drawable-nodpi/digitana_app_icon.webp` をそのまま使用します。
